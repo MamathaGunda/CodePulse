@@ -1,10 +1,9 @@
 ﻿namespace CodePulse.API.Models.Domain
 {
-    public class Category
+    public class Book
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string UrlHandle { get; set; }
-        public ICollection<BlogPost> BlogPosts { get; set; }
+        public int Price { get; set; }
     }
 }

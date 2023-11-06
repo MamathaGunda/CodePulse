@@ -17,6 +17,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("codePulseConnectionString"));
 });
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IBooksRepositoy, BooksRepository>();
+builder.Services.AddScoped<IBlogPostRepository, BlogPostRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
